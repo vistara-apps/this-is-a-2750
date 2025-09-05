@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Video, Mic, Square, Play, AlertTriangle, MapPin, Clock, Users } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import { formatDuration } from '../utils/helpers';
+import AlertSystem from './AlertSystem';
+import { RecordButton } from './CallToAction';
+import { pinataService, supabaseService } from '../services/api';
 
 export default function RecordingControls() {
   const { state, dispatch } = useAppContext();

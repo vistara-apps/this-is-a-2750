@@ -1,7 +1,7 @@
 import React from 'react';
 import { Shield, FileText, History, Settings, AlertTriangle } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
-import DigitalCard from './DigitalCard';
+import DigitalCardEnhanced from './DigitalCardEnhanced';
 import RecordingControls from './RecordingControls';
 import InteractionHistory from './InteractionHistory';
 import SettingsPanel from './SettingsPanel';
@@ -20,7 +20,7 @@ export default function AppShell() {
   const renderActiveTab = () => {
     switch (state.ui.activeTab) {
       case 'rights':
-        return <DigitalCard />;
+        return <DigitalCardEnhanced />;
       case 'record':
         return <RecordingControls />;
       case 'history':
@@ -28,7 +28,7 @@ export default function AppShell() {
       case 'settings':
         return <SettingsPanel />;
       default:
-        return <DigitalCard />;
+        return <DigitalCardEnhanced />;
     }
   };
 

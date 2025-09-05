@@ -97,6 +97,26 @@ function appReducer(state, action) {
         ...state,
         ui: { ...state.ui, showOnboarding: false }
       };
+    case 'UPDATE_USER_SUBSCRIPTION':
+      return {
+        ...state,
+        user: { ...state.user, subscription: action.payload }
+      };
+    case 'SET_USER_EMAIL':
+      return {
+        ...state,
+        user: { ...state.user, email: action.payload }
+      };
+    case 'SET_PREFERRED_LANGUAGE':
+      return {
+        ...state,
+        user: { ...state.user, preferredLanguage: action.payload }
+      };
+    case 'CLEAR_ALERTS':
+      return {
+        ...state,
+        alerts: { active: false, sent: [] }
+      };
     default:
       return state;
   }

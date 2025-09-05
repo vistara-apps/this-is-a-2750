@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { User, Users, Globe, CreditCard, HelpCircle, Shield, Plus, Trash2 } from 'lucide-react';
+import { User, Users, Globe, CreditCard, HelpCircle, Shield, Plus, Trash2, Crown } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
+import ContactPicker from './ContactPicker';
+import { UpgradeButton } from './CallToAction';
+import { getApiStatus } from '../services/api';
 
 export default function SettingsPanel() {
   const { state, dispatch } = useAppContext();

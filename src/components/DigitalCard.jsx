@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { MapPin, Globe, ChevronRight, Info, MessageSquare } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { MapPin, Globe, ChevronRight, Info, MessageSquare, Shield, Copy, Check } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import StateSelector from './StateSelector';
+import { getStateLaws, detectStateFromLocation } from '../services/stateLaws';
+import { openAIService } from '../services/api';
 
 const rightsData = {
   'CA': {

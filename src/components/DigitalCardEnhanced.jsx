@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, Globe, ChevronRight, Info, MessageSquare, Shield, Copy, Check, ChevronDown, ChevronUp, Translate, RefreshCw } from 'lucide-react';
+import { MapPin, Globe, ChevronRight, Info, MessageSquare, Shield, Copy, Check, ChevronDown, ChevronUp, Languages, RefreshCw } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import StateSelector from './StateSelector';
 import { getStateLaws, detectStateFromLocation } from '../services/stateLaws';
@@ -97,7 +97,7 @@ export default function DigitalCardEnhanced() {
               {isTranslating ? (
                 <RefreshCw className="w-4 h-4 animate-spin" />
               ) : (
-                <Translate className="w-4 h-4" />
+                <Languages className="w-4 h-4" />
               )}
               <span className="text-sm font-medium">
                 {language === 'en' ? 'ES' : 'EN'}
